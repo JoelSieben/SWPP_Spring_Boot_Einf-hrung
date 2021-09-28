@@ -6,6 +6,7 @@ import com.example.testuumgebung.Request.StudentRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -53,5 +54,10 @@ public class StudentService {
                 studentRequest.getProfilbild()
         )
         );
+    }
+
+    public Optional <Student> login(String email, String passwort){
+        Optional <Student> student = stundentRepo.findByEmailAndPasswort(email, passwort);
+        return student;
     }
 }
