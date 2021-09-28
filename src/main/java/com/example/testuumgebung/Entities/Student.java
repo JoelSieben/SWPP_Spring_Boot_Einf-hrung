@@ -32,6 +32,14 @@ public class Student {
         this.profilbild = profilbild;
     }
 
+    public Student(String vorname, String nachname, String email, String passwort, byte[] profilbild) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.email = email;
+        this.passwort = passwort;
+        this.profilbild = profilbild;
+    }
+
     public Student(int id, String vorname, String nachname, String email, int matrikelnummer, String passwort, byte[] profilbild) {
         this.id = id;
         this.vorname = vorname;

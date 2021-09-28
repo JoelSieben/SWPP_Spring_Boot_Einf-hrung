@@ -40,6 +40,7 @@ public class StudentConfig {
                     null
 
             );
+            if(stundentRepo.findAll().size() == 0)
             stundentRepo.saveAll(
                     List.of(student1, student2)
             );
