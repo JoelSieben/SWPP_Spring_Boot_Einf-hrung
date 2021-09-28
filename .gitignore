@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+data/h2userdb.mv.db
