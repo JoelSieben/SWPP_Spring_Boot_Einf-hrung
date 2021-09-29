@@ -14,4 +14,6 @@ public interface StundentRepo extends JpaRepository<Student, Integer> {
    Optional <Student> findByMatrikelnummer(int matrikelnummer);
 
    Optional <Student> findByEmailAndPasswort(String email, String passwort);
+
+   Student findById(int id);
 }

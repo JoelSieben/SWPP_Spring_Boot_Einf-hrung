@@ -1,6 +1,10 @@
 package com.example.testuumgebung.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table (name="Stundent")
@@ -19,6 +23,14 @@ public class Student {
     private String passwort;
     @Lob
     private byte[] profilbild;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "student")
+    private Set<Lerngruppe> lerngruppen = new HashSet<>();
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "gruppenmitglied")
+    private Set<Lerngruppe> lerngruppenMitglieder = new HashSet<>();
 
     public Student() {
     }
